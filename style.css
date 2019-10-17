@@ -1,0 +1,31 @@
+body {
+    background: #000;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+svg polygon {
+    stroke: #fff;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: 2.5s diamond infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes diamond {
+    from {
+        stroke-dashoffset: 500;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+    }
+}
